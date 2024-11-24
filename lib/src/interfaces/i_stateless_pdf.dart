@@ -3,18 +3,20 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 abstract class StatelessPdf {
-  pw.TextStyle get baseStyle => const pw.TextStyle(lineSpacing: 8);
+  pw.TextStyle get baseStyle => const pw.TextStyle(lineSpacing: 8, fontSize: 14);
 
   Future<Uint8List> loadPdf() async {
     final pdf = pw.Document();
-    pdf.addPage(pw.Page(
-      build: (context) => build(),
-    ));
+    pdf.addPage(
+      pw.MultiPage(
+        build: (context) => build(),
+      ),
+    );
 
     return await pdf.save();
   }
 
-  pw.Widget build();
+  List<pw.Widget> build();
 }
 
 pw.Widget textWithUnderline({
@@ -29,7 +31,10 @@ pw.Widget textWithUnderline({
   final underline = List.generate(underlineLength, (_) => "_").join();
   return pw.Stack(
     children: [
-      pw.Text(underline, style: style),
+      pw.Text(
+        underline,
+        style: style,
+      ),
       if (content != null && content.isNotEmpty)
         pw.Positioned.fill(
           child: pw.Align(

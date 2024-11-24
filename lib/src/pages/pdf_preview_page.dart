@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:pdf_poc/src/examples/atestado_pdf_builder.dart';
+import 'package:pdf_poc/src/examples/exam_request_pdf_builder.dart';
+import 'package:pdf_poc/src/examples/receita_pdf_builder.dart';
 
 import 'package:printing/printing.dart';
 
@@ -14,7 +15,7 @@ class PdfPreviewPage extends StatelessWidget {
         title: const Text('Visualizar PDF'),
       ),
       body: FutureBuilder<Uint8List>(
-        future: AtestadoPdfBuilder().loadPdf(),
+        future: ExamRequestPdfBuilder().loadPdf(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
