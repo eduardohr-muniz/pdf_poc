@@ -1,5 +1,5 @@
 import 'package:pdf/pdf.dart';
-import 'package:pdf_poc/src/interfaces/i_stateless_pdf.dart';
+import 'package:flutter_pdf_poc/src/interfaces/i_stateless_pdf.dart';
 import 'package:pdf/widgets.dart';
 
 class ExamRequestPdfBuilder extends StatelessPdf {

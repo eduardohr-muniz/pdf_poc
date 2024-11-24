@@ -1,6 +1,6 @@
 {
-    "name": "pdf_poc",
-    "short_name": "pdf_poc",
+    "name": "flutter_pdf_poc",
+    "short_name": "flutter_pdf_poc",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

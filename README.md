@@ -1,4 +1,4 @@
-# pdf_poc
+# flutter_pdf_poc
 
 A new Flutter project.
 

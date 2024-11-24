@@ -1,4 +1,4 @@
-package com.example.pdf_poc
+package com.example.flutter_pdf_poc
 
 import io.flutter.embedding.android.FlutterActivity
 

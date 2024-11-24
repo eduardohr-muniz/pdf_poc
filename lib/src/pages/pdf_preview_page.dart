@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:pdf_poc/src/examples/exam_request_pdf_builder.dart';
-import 'package:pdf_poc/src/examples/receita_pdf_builder.dart';
+import 'package:flutter_pdf_poc/src/examples/exam_request_pdf_builder.dart';
+import 'package:flutter_pdf_poc/src/examples/receita_pdf_builder.dart';
 
 import 'package:printing/printing.dart';
 
